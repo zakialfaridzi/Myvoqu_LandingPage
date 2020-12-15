@@ -46,7 +46,7 @@ export default () => {
       imageSrc: "https://i.ibb.co/k2vq4fW/home.png",
       title: "Konsep Sosial Media",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Dengan konsep sosial media, anda tidak akan bosan saat menghafal Alquran karena ada teman untuk berinteraksi.",
       url: "#",
     },
 
@@ -54,15 +54,15 @@ export default () => {
       imageSrc: "https://i.ibb.co/RjLtg00/Inside-Group.png",
       title: "Group Yang Interaktif",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Kita semua tidak suka jika berada di sebuah grup hafalan namun tidak dibimbing kan? Tenang saja, di dalam grup hafalan MyVoQu anda akan dibimbing oleh mentor yang berkualitas.",
       url: "#",
     },
 
     {
       imageSrc: "https://i.ibb.co/BrDrDKM/ngaji.jpg",
-      title: "Menghafal Quran Live Bersama Tokoh Islami",
+      title: "Menghafal Alquran Live Bersama Tokoh Islami",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Kamu yakin tidak mau menghafal Alquran live bersama tokoh islami terkenal dari Indonesia?",
       url: "#",
     },
   ];

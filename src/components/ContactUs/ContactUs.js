@@ -39,15 +39,15 @@ const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`;
 export default ({
   heading = (
     <>
-      Ikuti{" "}
+      Subscribe{" "}
       <span tw="text-primary-500" id="closedbeta">
-        Closed Beta
+        Newsletter
       </span>
       <wbr /> Kami.
     </>
   ),
-  description = "Jadilah orang pertama yang mencoba aplikasi MyVoQu cukup dengan mengisi form dibawah dan sertakan alasanmu.",
-  submitButtonText = "Ikuti",
+  description = "Jangan sampai ketinggalan informasi terbaru dari MyVoQu.",
+  submitButtonText = "Subscribe",
   formAction = "#",
   formMethod = "get",
   textOnLeft = true,
@@ -64,9 +64,6 @@ export default ({
             {description && <Description>{description}</Description>}
             <Form action={formAction} method={formMethod}>
               <Input type="email" name="email" placeholder="Email Anda" />
-              <Input type="text" name="name" placeholder="Nama Lengkap Anda" />
-              <Input type="text" name="subject" placeholder="Subjek Email" />
-              <Textarea name="message" placeholder="Alasan Anda" />
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>

@@ -5,11 +5,32 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/sent_messages_.svg";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import SubscribeCard from "react-subscribe-card";
+
+const mailchimpURL = `https://gmail.us7.list-manage.com/subscribe/post?u=b58f11e5ff79d63d4e7d50002&amp;id=66e33a68aa`;
+
+const outerCardStyle = tw.div`relative -mt-48`;
+const subContainerStyle = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
+const subInputStyle = `
+      border-width: 0;
+      margin: 0;
+    `;
+const subButtonStyle = `
+      border-radius: 0;
+      flex-grow: 1;
+      background-color: #fdfdfd;
+      color: #000000;
+    `;
 
 const Container = tw.div`relative -mt-48`;
+
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
+
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
+
 const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto`;
+
 const TextColumn = styled(Column)((props) => [
   tw`md:w-7/12 mt-16 md:mt-0`,
   props.textOnLeft
@@ -21,17 +42,8 @@ const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
   tw`rounded bg-contain bg-no-repeat bg-center h-full`,
 ]);
-const TextContent = tw.div`lg:py-8 text-center md:text-left`;
-
-const Heading = tw(
-  SectionHeading
-)`mt-4 text-gray-700  text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
 const Form = tw.form`mt-8 md:mt-10 text-sm flex flex-col max-w-sm mx-auto md:mx-0`;
-const Input = tw.input`mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500`;
-
-const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`;
 
 export default ({
   heading = (
@@ -43,10 +55,6 @@ export default ({
       <wbr /> Kami.
     </>
   ),
-  description = "Jangan sampai ketinggalan informasi terbaru dari MyVoQu.",
-  submitButtonText = "Subscribe",
-  formAction = "#",
-  formMethod = "get",
   textOnLeft = true,
 }) => {
   return (
@@ -56,14 +64,15 @@ export default ({
           <Image imageSrc={EmailIllustrationSrc} />
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <Heading>{heading}</Heading>
-            {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
-              <Input type="email" name="email" placeholder="Email Anda" />
-              <SubmitButton type="submit">{submitButtonText}</SubmitButton>
-            </Form>
-          </TextContent>
+          <SubscribeCard
+            mailchimpURL={mailchimpURL}
+            outerCardStyle={outerCardStyle}
+            subContainerStyle={subContainerStyle}
+            subInputStyle={Form}
+            subButtonStyle={subButtonStyle}
+            title={heading}
+            description="Jangan sampai ketinggalan informasi terbaru dari MyVoQu."
+          />
         </TextColumn>
       </TwoColumn>
     </Container>

@@ -2,10 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading } from "components/misc/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/sent_messages_.svg";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
 import SubscribeCard from "react-subscribe-card";
 
 const mailchimpURL = `https://gmail.us7.list-manage.com/subscribe/post?u=b58f11e5ff79d63d4e7d50002&amp;id=66e33a68aa`;
@@ -48,7 +45,7 @@ const Form = tw.form`mt-8 md:mt-10 text-sm flex flex-col max-w-sm mx-auto md:mx-
 export default ({
   heading = (
     <>
-      Subscribe{" "}
+      Yuk Subscribe{" "}
       <span tw="text-primary-500" id="closedbeta">
         Newsletter
       </span>

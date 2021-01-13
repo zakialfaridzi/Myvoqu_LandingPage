@@ -11,7 +11,7 @@ const outerCardStyle = tw.div`relative -mt-48`;
 const subContainerStyle = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 
 const subButtonStyle = `
-      border-radius: 0;
+      border-radius: 5px;
       flex-grow: 1;
       background-color: #fdfdfd;
       color: #333;
@@ -74,6 +74,8 @@ export default ({
             subButtonStyle={subButtonStyle}
             title={heading}
             description="Jangan sampai ketinggalan informasi terbaru dari MyVoQu."
+            emailPlaceholder="Email Anda"
+            buttonText="Daftar"
           />
         </TextColumn>
       </TwoColumn>

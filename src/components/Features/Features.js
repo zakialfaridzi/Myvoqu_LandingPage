@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg";
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
-import AnimationRevealPage from "ExternalLibs/AnimationRevealPage.js";
+import AnimationRevealPage from "ExternalLibs/AnimationRevealPage";
 
 const Container = tw.div`relative`;
 
@@ -20,10 +20,10 @@ const Card = styled.div((props) => [
 ]);
 const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
-  tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-full md:h-144 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
+  tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-80 md:h-144 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
 ]);
 const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`;
-// const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`;
+const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`;
 const Title = tw.h4`text-3xl font-bold text-gray-900`;
 const Description = tw.p`mt-2 text-sm leading-loose`;
 const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`;
@@ -68,29 +68,41 @@ export default () => {
     },
   ];
 
+  const backPos = {
+    backgroundPos: "center top",
+    backgroundRep: "no-repeat",
+  };
+
   return (
     <Container>
       <SingleColumn>
         <HeadingInfoContainer>
           <HeadingTitle>Apa itu MyVoQu?</HeadingTitle>
           <HeadingDescription>
-            Enjoy your journey in Alquran learning with us.
+            Dengan kami, pembelajaran Alquran akan menjadi lebih menyenangkan.
           </HeadingDescription>
         </HeadingInfoContainer>
 
         <Content>
-          {cards.map((card, i) => (
-            <AnimationRevealPage>
+          <AnimationRevealPage>
+            {cards.map((card, i) => (
               <Card key={i} reversed={i % 2 === 1}>
-                <Image imageSrc={card.imageSrc} />
+                <Image
+                  imageSrc={card.imageSrc}
+                  style={{
+                    backgroundRepeat: backPos.backgroundRep,
+                    backgroundPosition: backPos.backgroundPos,
+                  }}
+                />
                 <Details>
+                  <Subtitle>{card.subtitle}</Subtitle>
                   <Title>{card.title}</Title>
                   <Description>{card.description}</Description>
-                  <Link href={card.url}>Lihat Lebih</Link>
+                  <Link href={card.url}>Lihat Lebih Lengkap</Link>
                 </Details>
               </Card>
-            </AnimationRevealPage>
-          ))}
+            ))}
+          </AnimationRevealPage>
         </Content>
       </SingleColumn>
       <SvgDotPattern1 />

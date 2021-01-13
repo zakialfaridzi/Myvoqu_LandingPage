@@ -9,15 +9,18 @@ const mailchimpURL = `https://gmail.us7.list-manage.com/subscribe/post?u=b58f11e
 
 const outerCardStyle = tw.div`relative -mt-48`;
 const subContainerStyle = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const subInputStyle = `
-      border-width: 0;
-      margin: 0;
-    `;
+
 const subButtonStyle = `
       border-radius: 0;
       flex-grow: 1;
       background-color: #fdfdfd;
-      color: #000000;
+      color: #333;
+
+      &:hover{
+        background-color:#5011CC;
+        color:#FDFDFD;
+	      transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, color 0.3s ease 0s, fill 0.3s ease 0s, stroke 0.3s ease 0s, opacity 0.3s ease 0s, box-shadow 0.3s ease 0s, transform 0.3s ease 0s;
+      }
     `;
 
 const Container = tw.div`relative -mt-48`;
@@ -45,11 +48,13 @@ const Form = tw.form`mt-8 md:mt-10 text-sm flex flex-col max-w-sm mx-auto md:mx-
 export default ({
   heading = (
     <>
-      Yuk Subscribe{" "}
-      <span tw="text-primary-500" id="closedbeta">
-        Newsletter
+      <span style={{ color: "#333" }}>
+        Yuk Subscribe{" "}
+        <span tw="text-primary-500" id="closedbeta">
+          Newsletter
+        </span>
+        <wbr /> Kami.
       </span>
-      <wbr /> Kami.
     </>
   ),
   textOnLeft = true,

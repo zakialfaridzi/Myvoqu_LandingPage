@@ -29,8 +29,8 @@ export default () => {
           <ShowcaseTubes />
         </motion.div>
       </div>
+      <Features />
       <AnimationRevealPage>
-        <Features />
         <Testimonial />
       </AnimationRevealPage>
       <Platforms />

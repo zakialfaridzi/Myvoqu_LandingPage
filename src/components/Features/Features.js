@@ -3,6 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg";
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
+import AnimationRevealPage from "ExternalLibs/AnimationRevealPage.js";
 
 const Container = tw.div`relative`;
 
@@ -79,14 +80,16 @@ export default () => {
 
         <Content>
           {cards.map((card, i) => (
-            <Card key={i} reversed={i % 2 === 1}>
-              <Image imageSrc={card.imageSrc} />
-              <Details>
-                <Title>{card.title}</Title>
-                <Description>{card.description}</Description>
-                <Link href={card.url}>Lihat Lebih</Link>
-              </Details>
-            </Card>
+            <AnimationRevealPage>
+              <Card key={i} reversed={i % 2 === 1}>
+                <Image imageSrc={card.imageSrc} />
+                <Details>
+                  <Title>{card.title}</Title>
+                  <Description>{card.description}</Description>
+                  <Link href={card.url}>Lihat Lebih</Link>
+                </Details>
+              </Card>
+            </AnimationRevealPage>
           ))}
         </Content>
       </SingleColumn>

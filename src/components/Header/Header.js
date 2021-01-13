@@ -62,10 +62,10 @@ export default ({
 }) => {
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">Tentang Kami</NavLink>
+      {/* <NavLink href="/#">Tentang Kami</NavLink>
       <NavLink href="/#">Harga</NavLink>
-      <NavLink href="/#">Hubungi Kami</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
+      <NavLink href="/#">Hubungi Kami</NavLink> */}
+      <NavLink href="https://www.google.com/" tw="lg:ml-12!">
         Masuk
       </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">

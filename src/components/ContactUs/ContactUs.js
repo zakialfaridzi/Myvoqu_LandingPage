@@ -51,7 +51,7 @@ export default ({
       <span style={{ color: "#333" }}>
         Yuk Subscribe{" "}
         <span tw="text-primary-500" id="closedbeta">
-          newz
+          Newsletter
         </span>
         <wbr /> Kami.
       </span>

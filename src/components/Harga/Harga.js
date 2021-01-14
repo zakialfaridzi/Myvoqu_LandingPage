@@ -104,7 +104,7 @@ export default ({
       price: ["Rp 15", ".000/bulan"],
       oldPrice: "Rp 20.000",
       description:
-        "Dengan paket BASIC, anda dapat menggunakan seluruh fitur dari MyVoQu.",
+        "Dengan paket BASIC, anda dapat menggunakan seluruh fitur dari MyVoQu dengan tambahan 15 GB Cloud Storage dan sesi live yang tidak terbatas.",
       features: [
         "Sosial Media",
         "15 GB Cloud Storage",

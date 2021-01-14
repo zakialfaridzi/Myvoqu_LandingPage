@@ -13,7 +13,7 @@ const subContainerStyle = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const subButtonStyle = `
       border-radius: 5px;
       flex-grow: 1;
-      background-color: #fdfdfd;
+      background-color: #0000;
       color: #333;
 
       &:hover{

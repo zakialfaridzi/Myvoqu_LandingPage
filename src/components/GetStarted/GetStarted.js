@@ -34,11 +34,11 @@ const DecoratorBlob2 = tw(
 )`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-500 opacity-5`;
 export default ({
   subheading = "Tertarik dengan MyVoQu?",
-  heading = "Ikuti Closed Beta Kami",
+  heading = "Ayo Bergabung Dalam Keluarga MyVoQu",
   primaryLinkText = "Ikuti",
-  primaryLinkUrl = "#closedbeta",
+  primaryLinkUrl = "#regist",
   secondaryLinkText = "Hubungi Kami",
-  secondaryLinkUrl = "#",
+  secondaryLinkUrl = "#csig",
   pushDownFooter = true,
 }) => {
   return (
@@ -47,7 +47,7 @@ export default ({
         <PrimaryBackgroundContainer>
           <Row>
             <TextContainer>
-              {subheading && <Subheading>{subheading}</Subheading>}
+              {/* {subheading && <Subheading>{subheading}</Subheading>} */}
               <Heading>{heading}</Heading>
             </TextContainer>
             <LinksContainer>

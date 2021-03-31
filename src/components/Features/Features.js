@@ -98,7 +98,7 @@ export default () => {
                   <Subtitle>{card.subtitle}</Subtitle>
                   <Title>{card.title}</Title>
                   <Description>{card.description}</Description>
-                  <Link href={card.url}>Lihat Lebih Lengkap</Link>
+                  {/* <Link href={card.url}>Lihat Lebih Lengkap</Link> */}
                 </Details>
               </Card>
             ))}

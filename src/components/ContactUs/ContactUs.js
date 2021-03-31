@@ -49,10 +49,7 @@ export default ({
   heading = (
     <>
       <span style={{ color: "#333" }}>
-        Yuk Subscribe{" "}
-        <span tw="text-primary-500" id="closedbeta">
-          Newsletter
-        </span>
+        Yuk Subscribe <span tw="text-primary-500">Newsletter</span>
         <wbr /> Kami.
       </span>
     </>

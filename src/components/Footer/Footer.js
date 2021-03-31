@@ -1,105 +1,65 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
-
-import LogoImage from "../../images/logo.png";
+import { Container as ContainerBase } from "components/misc/Layouts.js";
+import logo from "../../images/logo.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
+import { ReactComponent as InstagramIcon } from "../../images/instagram-logo.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 
-const Container = tw.div`relative bg-gray-200 -mx-8 -mb-8 px-8`;
-const FiveColumns = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between`;
+const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`;
+const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
-const Column = tw.div`md:w-1/5`;
-const WideColumn = tw(
-  Column
-)`text-center md:text-left w-full md:w-2/5 mb-10 md:mb-0`;
-
-const ColumnHeading = tw.h5`font-bold`;
-
-const LinkList = tw.ul`mt-4 text-sm font-medium`;
-const LinkListItem = tw.li`mt-3`;
-const Link = tw.a`border-b-2 border-transparent hocus:text-primary-300 hocus:border-primary-300 pb-1 transition duration-300`;
+const Row = tw.div`flex items-center justify-center flex-col px-8`;
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-8`;
-const LogoText = tw.h5`ml-2 text-xl font-black text-primary-300`;
+const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
-const CompanyDescription = tw.p`mt-4 max-w-xs font-medium text-sm mx-auto md:mx-0 md:mr-4 `;
+const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`;
+const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
-const SocialLinksContainer = tw.div`mt-4 `;
+const SocialLinksContainer = tw.div`mt-10`;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block p-2 rounded-full bg-gray-700 text-gray-100 hover:bg-gray-900 transition duration-300 mr-4`}
+  ${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4`}
   svg {
-    ${tw`w-4 h-4`}
+    ${tw`w-5 h-5`}
   }
 `;
 
+const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`;
 export default () => {
   return (
     <Container>
-      <FiveColumns>
-        <WideColumn>
+      <Content>
+        <Row>
           <LogoContainer>
-            <LogoImg src={LogoImage} />
+            <LogoImg src={logo} />
             <LogoText>MyVoQu</LogoText>
           </LogoContainer>
-          <CompanyDescription>
-            MyVoQu adalah aplikasi pembelajaran alquran berkonsep sosial media
-            dan interaktif
-          </CompanyDescription>
+          {/* <LinksContainer>
+            <Link href="#">Home</Link>
+            <Link href="#">About</Link>
+            <Link href="#">Contact Us</Link>
+            <Link href="#">Blog</Link>
+            <Link href="#">Reviews</Link>
+          </LinksContainer> */}
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
               <FacebookIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
-              <TwitterIcon />
+            <SocialLink href="https://instagram.com/myvoqu.id" id="csig">
+              <InstagramIcon />
             </SocialLink>
             <SocialLink href="https://youtube.com">
               <YoutubeIcon />
             </SocialLink>
           </SocialLinksContainer>
-        </WideColumn>
-
-        <Column>
-          <ColumnHeading>Link</ColumnHeading>
-          <LinkList>
-            <LinkListItem>
-              <Link href="#">Blog</Link>
-            </LinkListItem>
-            <LinkListItem>
-              <LinkListItem>
-                <Link href="#">Tentang Kami</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Harga</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">FAQ</Link>
-              </LinkListItem>
-            </LinkListItem>
-          </LinkList>
-        </Column>
-
-        <Column>
-          <ColumnHeading>Legal</ColumnHeading>
-          <LinkList>
-            {/* <LinkListItem>
-              <Link href="#">GDPR</Link>
-            </LinkListItem> */}
-            <LinkListItem>
-              <Link href="#">Privacy Policy</Link>
-            </LinkListItem>
-            <LinkListItem>
-              <Link href="#">Terms of Service</Link>
-            </LinkListItem>
-            <LinkListItem>
-              <Link href="#">Disclaimer</Link>
-            </LinkListItem>
-          </LinkList>
-        </Column>
-      </FiveColumns>
+          <CopyrightText>
+            &copy; Copyright 2020, MyVoQu. All Rights Reserved.
+          </CopyrightText>
+        </Row>
+      </Content>
     </Container>
   );
 };

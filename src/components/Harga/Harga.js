@@ -88,7 +88,7 @@ export default ({
   const defaultPlans = [
     {
       name: "Gratis",
-      price: ["Rp 0", ".00/bulan"],
+      price: ["Rp 0", ".000/bulan"],
       description:
         "Cocok untuk anda yang ingin menghafal Alquran berkonsep sosial media yang segar.",
       features: [
@@ -97,7 +97,7 @@ export default ({
         "2 Sesi Live/bulan ",
         "Quiz",
       ],
-      url: "#",
+      url: "#regist",
     },
     {
       name: "BASIC",
@@ -112,7 +112,7 @@ export default ({
         "Grup Hafalan",
         "Quiz",
       ],
-      url: "#",
+      url: "#regist",
       featured: "Rekomendasi",
     },
     {
@@ -129,7 +129,7 @@ export default ({
         "Grup Hafalan",
         "Quiz",
       ],
-      url: "https://google.com",
+      url: "#regist",
     },
   ];
 

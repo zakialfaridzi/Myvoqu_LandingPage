@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import tw from "twin.macro";
+import { SectionHeading } from "components/misc/Headings.js";
 
 class CountdownTimer extends Component {
   state = {
@@ -33,18 +35,23 @@ class CountdownTimer extends Component {
   render() {
     const { days, hours, minutes, seconds, timeUp } = this.state;
     const dayString = "Hari";
+
+    const Heading = tw(
+      SectionHeading
+    )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+
     return timeUp ? (
-      <p>Event in progress</p>
+      <Heading>Event in progress</Heading>
     ) : (
       <>
-        <p style={{ color: "#eaf4fc", textAlign: "center" }}>
+        <Heading style={{ color: "#eaf4fc", textAlign: "center" }}>
           Countdown Menuju Hari Rilis!{" "}
           <span role="img" aria-label="releasedate">
             🎉
           </span>
           <br />
           {`${days} ${dayString} ${hours} Jam ${minutes}  Menit ${seconds} Detik`}
-        </p>
+        </Heading>
       </>
     );
   }

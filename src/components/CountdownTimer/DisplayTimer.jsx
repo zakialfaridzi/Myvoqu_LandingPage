@@ -13,7 +13,7 @@ const TextContainer = tw(ColumnContainer)`text-6xl sm:text-4xl font-bold`;
 
 export default ({ pushDownFooter = true }) => {
   return (
-    <Container css={pushDownFooter && tw`-mt-48 lg:mb-24`}>
+    <Container css={pushDownFooter && tw`mb-20 -mt-48 lg:mb-24`}>
       <ContentWithPaddingXl>
         <PrimaryBackgroundContainer style={{ backgroundColor: "#243E63" }}>
           <Row>

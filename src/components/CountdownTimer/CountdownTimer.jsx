@@ -34,7 +34,6 @@ class CountdownTimer extends Component {
 
   render() {
     const { days, hours, minutes, seconds, timeUp } = this.state;
-    const dayString = "Hari";
 
     const Heading = tw(
       SectionHeading
@@ -50,7 +49,7 @@ class CountdownTimer extends Component {
             🎉
           </span>
           <br />
-          {`${days} ${dayString} ${hours} Jam ${minutes}  Menit ${seconds} Detik`}
+          {`${days} Hari ${hours} Jam ${minutes}  Menit ${seconds} Detik`}
         </Heading>
       </>
     );

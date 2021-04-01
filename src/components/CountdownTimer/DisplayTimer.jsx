@@ -18,7 +18,7 @@ export default ({ pushDownFooter = true }) => {
         <PrimaryBackgroundContainer style={{ backgroundColor: "#243E63" }}>
           <Row>
             <TextContainer>
-              <CountdownTimer date="04/12/2021" />
+              <CountdownTimer date="04/13/2021" />
             </TextContainer>
           </Row>
         </PrimaryBackgroundContainer>

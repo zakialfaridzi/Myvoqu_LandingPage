@@ -53,10 +53,13 @@ export default () => {
       <NavLink href="/#">Hubungi Kami</NavLink> */}
     </NavLinks>,
     <NavLinks>
-      <NavLink href="#" tw="lg:ml-12!">
+      <NavLink href="https://myvoqu.com/myvoqu/auth" tw="lg:ml-12!">
         Masuk
       </NavLink>
-      <PrimaryLink css={tw`rounded-full`} href="/#">
+      <PrimaryLink
+        css={tw`rounded-full`}
+        href="https://myvoqu.com/myvoqu/auth/registration"
+      >
         Daftar
       </PrimaryLink>
     </NavLinks>,

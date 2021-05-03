@@ -97,7 +97,7 @@ export default ({
         "2 Sesi Live/bulan ",
         "Quiz",
       ],
-      url: "#regist",
+      url: "https://myvoqu.com/myvoqu/auth/registration",
     },
     {
       name: "BASIC",
@@ -112,7 +112,7 @@ export default ({
         "Grup Hafalan",
         "Quiz",
       ],
-      url: "#regist",
+      url: "https://myvoqu.com/myvoqu/auth/registration",
       featured: "Rekomendasi",
     },
     {
@@ -129,7 +129,7 @@ export default ({
         "Grup Hafalan",
         "Quiz",
       ],
-      url: "#regist",
+      url: "https://myvoqu.com/myvoqu/auth/registration",
     },
   ];
 

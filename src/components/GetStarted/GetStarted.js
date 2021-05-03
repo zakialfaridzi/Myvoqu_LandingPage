@@ -36,13 +36,13 @@ export default ({
   subheading = "Tertarik dengan MyVoQu?",
   heading = "Ayo Bergabung Dalam Keluarga MyVoQu",
   primaryLinkText = "Ikuti",
-  primaryLinkUrl = "#regist",
+  primaryLinkUrl = "https://myvoqu.com/myvoqu/auth/registration",
   secondaryLinkText = "Hubungi Kami",
-  secondaryLinkUrl = "#csig",
+  secondaryLinkUrl = "https://instagram.com/myvoqu.id",
   pushDownFooter = true,
 }) => {
   return (
-    <Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
+    <Container css={pushDownFooter}>
       <ContentWithPaddingXl>
         <PrimaryBackgroundContainer>
           <Row>

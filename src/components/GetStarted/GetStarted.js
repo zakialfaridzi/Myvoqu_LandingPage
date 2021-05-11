@@ -34,7 +34,7 @@ const DecoratorBlob2 = tw(
 )`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-500 opacity-5`;
 export default ({
   subheading = "Tertarik dengan MyVoQu?",
-  heading = "Ayo Bergabung Dalam Keluarga MyVoQu",
+  heading = "Yuk Bergabung Dalam Keluarga MyVoQu",
   primaryLinkText = "Ikuti",
   primaryLinkUrl = "https://myvoqu.com/myvoqu/auth/registration",
   secondaryLinkText = "Hubungi Kami",
